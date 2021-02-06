@@ -1,0 +1,28 @@
+﻿@model Remake_LoL_Death_Counter.Views.Counter.CounterModel
+@{
+    ViewBag.Title = "Contador de Muertes";
+}
+
+@section Css{
+
+ }
+
+@section JavaScript{ 
+    <script src="~/Scripts/CounterFunctions.js"></script>
+}
+
+<div class="content-box">
+    <div class="box-body">
+        <div class="text-left">
+            <h3>Contador</h3>
+        </div>
+
+        <div class="pseudoFormulario">
+            <Label for="NombreInvocador">Nombre de Invocador</Label>
+            <input type="text" name="NombreInvocador" id="NombreInvocador" value="" />
+            <label for="Servidor">Servidor</label>
+            <input type="text" name="Servidor" id="Servidor" value="" />
+            <button id="EnviarDatos">Enviar</button>
+        </div>
+    </div>
+</div>

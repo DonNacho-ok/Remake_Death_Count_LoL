@@ -10,15 +10,27 @@ namespace Remake_LoL_Death_Counter.Controllers
     {
         const string RiotApiKey = "";
 
-        public ActionResult Counter()
+        public ActionResult Contador()
         {
             return View();
         }
 
-        public ActionResult GetTotalDeaths(string NombreInvocador, string Servidor)
+        [HttpGet]
+        public string GetTotalDeaths(string NombreInvocador, string Servidor)
         {
-            var placeholder = 0;
-            return Json(placeholder);
+            var resultado = " ";
+
+            if (NombreInvocador != "" && Servidor != "" )
+            {
+                resultado = "Todo OK";
+            }
+            else
+            {
+                resultado = "algo pasó... a debuggear";
+            }
+
+            return resultado;
+            
         }
     }
 }
